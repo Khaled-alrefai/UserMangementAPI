@@ -1,0 +1,40 @@
+@baseUrl = http://localhost:5230
+###
+# ✅ Get all users
+GET {{baseUrl}}/api/User
+Authorization: Bearer my-secret-token
+Accept: application/json
+
+###
+# ✅ Get user by ID
+GET {{baseUrl}}/api/User/1
+Authorization: Bearer my-secret-token
+Accept: application/json
+
+###
+# ✅ Create a new user
+POST {{baseUrl}}/api/User
+Authorization: Bearer my-secret-token
+Content-Type: application/json
+
+{
+  "name": "Khaled",
+  "email": "khaled@example.com"
+}
+
+###
+# ✅ Update an existing user
+PUT {{baseUrl}}/api/User/1
+Authorization: Bearer my-secret-token
+Content-Type: application/json
+
+{
+  "name": "Updated Name",
+  "email": "updated@example.com"
+}
+
+###
+# ✅ Delete user by ID
+DELETE {{baseUrl}}/api/User/1
+Authorization: Bearer my-secret-token
+Accept: application/json
